@@ -49,7 +49,7 @@ export default function App() {
 				<div className="container flex justify-between pb-5">
 					<ThemeSwitch userPreference={data.requestInfo.userPrefs.theme} />
 				</div>
-				<FooterMenuRight />
+				<FooterMenuRight companyName="NEWS" altText="news logo" />
 			</div>
 		</Document>
 	)
