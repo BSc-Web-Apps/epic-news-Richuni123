@@ -8,6 +8,9 @@ import { type loader } from './__root.server'
 import FooterMenuRight from './components/organisms/Footer/FooterMenuRight'
 import HeaderWithSearch from './components/organisms/HeaderWithSearch'
 import useTheme from './hooks/useTheme.tsx'
+import HeroCallToAction from './components/organisms/Hero/HeroCallToAction.tsx'
+import heroImage from '~/assets/jpg/sample-hero.jpg'
+import { Button } from './components/atoms/Button.tsx'
 
 export const links: LinksFunction = () => {
 	return rootLinkElements
@@ -27,23 +30,25 @@ export default function App() {
 				<div className="flex-1">
 					<main className="bg-white-300 container grid h-full place-items-center">
 						<h1 className="text-mega">Welcome to the world of NEWS!</h1>
+						<div className="w-full py-16">
+							<HeroCallToAction
+								bg-transparent
+								image={heroImage}
+								imageRight={true}
+							>
+								<div className="flex flex-col gap-8 px-8">
+									<h2 className="text-h2">Welcome to Epic News</h2>
+									<p className="text-lg">
+										Keep up to date with the latest tech news.
+									</p>
+									<Button>sign up</Button>
+								</div>
+							</HeroCallToAction>
+						</div>
 						<p className="text-base text-gray-600 md:text-lg lg:text-2xl">
 							Welcome to Epic News, where the latest developments in tech are
 							found.
 						</p>
-
-						<div className="flex gap-8">
-							<button className="rounded bg-red-500 px-10 py-2 text-white hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-blue-400 sm:px-6 md:px-8 lg:px-10 xl:px-12">
-								Click Me
-							</button>
-
-							<button className="rounded bg-red-500 px-10 py-2 text-white hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-blue-400 sm:px-6 md:px-8 lg:px-10 xl:px-12">
-								Click Me
-							</button>
-							<button className="rounded bg-red-500 px-10 py-2 text-white hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-blue-400 sm:px-6 md:px-8 lg:px-10 xl:px-12">
-								Click Me
-							</button>
-						</div>
 					</main>
 				</div>
 				<div className="container flex justify-between pb-5">
