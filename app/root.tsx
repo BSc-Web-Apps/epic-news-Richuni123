@@ -32,16 +32,20 @@ export default function App() {
 						<h1 className="text-mega">Welcome to the world of NEWS!</h1>
 						<div className="w-full py-16">
 							<HeroCallToAction
-								bg-transparent
 								image={heroImage}
 								imageRight={true}
+								hasBackgroundColour={true}
 							>
-								<div className="flex flex-col gap-8 px-8">
-									<h2 className="text-h2">Welcome to Epic News</h2>
-									<p className="text-lg">
-										Keep up to date with the latest tech news.
-									</p>
-									<Button>sign up</Button>
+								<div className="flex h-full flex-1 flex-col justify-between p-16">
+									<div className="flex flex-col gap-8">
+										<h2 className="text-h2">Welcome to Epic News</h2>
+										<p className="text-lg">
+											Keep up to date with the latest tech news.
+										</p>
+									</div>
+									<Button asChild variant="default" size="lg">
+										<Link to="/signup">Sign up</Link>
+									</Button>
 								</div>
 							</HeroCallToAction>
 						</div>
