@@ -1,16 +1,16 @@
 import { type LinksFunction } from '@remix-run/node'
-import { useLoaderData } from '@remix-run/react'
+import { Outlet, Link, useLoaderData } from '@remix-run/react'
+import heroImage from '~/assets/jpg/sample-hero.jpg'
 import Document from '~/components/shared-layout/Document'
 import ThemeSwitch from '~/components/shared-layout/ThemeSwitch'
 import { useNonce } from '~/utils/nonce-provider.ts'
 import rootLinkElements from '~/utils/providers/rootLinkElements'
 import { type loader } from './__root.server'
+import { Button } from './components/atoms/Button.tsx'
 import FooterMenuRight from './components/organisms/Footer/FooterMenuRight'
 import HeaderWithSearch from './components/organisms/HeaderWithSearch'
-import useTheme from './hooks/useTheme.tsx'
 import HeroCallToAction from './components/organisms/Hero/HeroCallToAction.tsx'
-import heroImage from '~/assets/jpg/sample-hero.jpg'
-import { Button } from './components/atoms/Button.tsx'
+import useTheme from './hooks/useTheme.tsx'
 
 export const links: LinksFunction = () => {
 	return rootLinkElements
@@ -28,9 +28,8 @@ export default function App() {
 			<div className="flex h-screen flex-col justify-between">
 				<HeaderWithSearch />
 				<div className="flex-1">
-					<main className="bg-white-300 container grid h-full place-items-center">
-						<h1 className="text-mega">Welcome to the world of NEWS!</h1>
-						<div className="w-full py-16">
+					{/* <main className="  h-full ">
+						
 							<HeroCallToAction
 								image={heroImage}
 								imageRight={true}
@@ -48,12 +47,13 @@ export default function App() {
 									</Button>
 								</div>
 							</HeroCallToAction>
-						</div>
+						
 						<p className="text-base text-gray-600 md:text-lg lg:text-2xl">
 							Welcome to Epic News, where the latest developments in tech are
 							found.
 						</p>
-					</main>
+					</main> */}
+					<Outlet />
 				</div>
 				<div className="container flex justify-between pb-5">
 					<ThemeSwitch userPreference={data.requestInfo.userPrefs.theme} />
