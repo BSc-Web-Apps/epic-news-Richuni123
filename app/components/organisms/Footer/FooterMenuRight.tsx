@@ -18,13 +18,22 @@ const FooterMenuRight = ({
 				<div className="lg:flex">
 					<div className="dark:text-dark-secondary-foreground flex items-start gap-6 py-8 font-bold text-secondary-foreground lg:mr-24">
 						<div>
-							<NavLink to="#">About</NavLink>
+							<NavLink
+								to="/about-us"
+								prefetch="intent"
+								className="text-sm font-semibold text-muted-foreground transition hover:text-foreground"
+							>
+								About us
+							</NavLink>
 						</div>
 						<div>
-							<NavLink to="#">Contact</NavLink>
-						</div>
-						<div>
-							<NavLink to="#">Nav Label</NavLink>
+							<NavLink
+								to="/contact-us"
+								prefetch="intent"
+								className="text-sm font-semibold text-muted-foreground transition hover:text-foreground"
+							>
+								Contact us
+							</NavLink>
 						</div>
 					</div>
 

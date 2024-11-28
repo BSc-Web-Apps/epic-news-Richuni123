@@ -17,23 +17,48 @@ export default function HeaderWithSearch() {
 
 				<div className="flex flex-1 justify-center gap-8">
 					<NavLink
-						to="/"
+						to="/news"
 						prefetch="intent"
-						className="text-sm font-semibold text-muted-foreground transition hover:text-foreground"
+						className={({ isActive }) =>
+							`${isActive ? 'text-black underline underline-offset-8' : 'text-white'}`
+						}
 					>
-						Home
+						News
 					</NavLink>
 					<NavLink
-						to="/about-us"
+						to="/sport"
 						prefetch="intent"
-						className="text-sm font-semibold text-muted-foreground transition hover:text-foreground"
+						className={({ isActive }) =>
+							`${isActive ? 'text-black underline underline-offset-8' : 'text-white'}`
+						}
 					>
-						About us
+						Sport
+					</NavLink>
+					<NavLink
+						to="/business"
+						prefetch="intent"
+						className={({ isActive }) =>
+							`${isActive ? 'text-black underline underline-offset-8' : 'text-white'}`
+						}
+					>
+						Business
+					</NavLink>
+
+					<NavLink
+						to="/entertainment"
+						prefetch="intent"
+						className={({ isActive }) =>
+							`${isActive ? 'text-black underline underline-offset-8' : 'text-white'}`
+						}
+					>
+						Entertainment
 					</NavLink>
 					<NavLink
 						to="/contact-us"
 						prefetch="intent"
-						className="text-sm font-semibold text-muted-foreground transition hover:text-foreground"
+						className={({ isActive }) =>
+							`${isActive ? 'text-black underline underline-offset-8' : 'text-white'}`
+						}
 					>
 						Contact us
 					</NavLink>
