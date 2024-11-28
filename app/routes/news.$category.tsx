@@ -12,7 +12,7 @@ export async function loader({ params }: LoaderFunctionArgs) {
 }
 const WireframeBlock = () => {
 	return (
-		<div className="h-72 animate-pulse rounded-lg bg-gray-200 dark:bg-gray-700" />
+		<div className="h-72 animate-pulse rounded-lg bg-gray-200 dark:bg-gray-700 " />
 	)
 }
 

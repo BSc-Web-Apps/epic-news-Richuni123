@@ -21,7 +21,7 @@ export default function App() {
 
 	return (
 		<Document nonce={nonce} theme={theme}>
-			<div className="flex h-screen flex-col justify-between">
+			<div className="flex h-screen flex-col justify-between ">
 				<HeaderWithSearch />
 				<div className="flex-1">
 					<Outlet />
