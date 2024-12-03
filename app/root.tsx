@@ -1,5 +1,6 @@
 import { type LinksFunction } from '@remix-run/node'
 import { Outlet, useLoaderData } from '@remix-run/react'
+import { AuthenticityTokenProvider } from 'remix-utils/csrf/react'
 import Document from '~/components/shared-layout/Document'
 import { useNonce } from '~/utils/nonce-provider.ts'
 import rootLinkElements from '~/utils/providers/rootLinkElements'
@@ -20,17 +21,19 @@ export default function App() {
 	const theme = useTheme()
 
 	return (
-		<Document nonce={nonce} theme={theme}>
-			<div className="flex h-screen flex-col justify-between ">
-				<HeaderWithSearch />
-				<div className="flex-1">
-					<Outlet />
-				</div>
-				{/* <div className="container flex justify-between pb-5">
+		<AuthenticityTokenProvider token={data.csrfToken}>
+			<Document nonce={nonce} theme={theme}>
+				<div className="flex h-screen flex-col justify-between ">
+					<HeaderWithSearch />
+					<div className="flex-1">
+						<Outlet />
+					</div>
+					{/* <div className="container flex justify-between pb-5">
 					<ThemeSwitch userPreference={data.requestInfo.userPrefs.theme} />
 				</div> */}
-				<FooterMenuRight companyName="NEWS" altText="news logo" />
-			</div>
-		</Document>
+					<FooterMenuRight companyName="NEWS" altText="news logo" />
+				</div>
+			</Document>
+		</AuthenticityTokenProvider>
 	)
 }
