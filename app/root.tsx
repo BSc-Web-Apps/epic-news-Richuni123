@@ -8,6 +8,7 @@ import { type loader } from './__root.server'
 import FooterMenuRight from './components/organisms/Footer/FooterMenuRight'
 import HeaderWithSearch from './components/organisms/HeaderWithSearch'
 import useTheme from './hooks/useTheme.tsx'
+import { HoneypotProvider } from 'remix-utils/honeypot/react'
 
 export const links: LinksFunction = () => {
 	return rootLinkElements
@@ -22,18 +23,20 @@ export default function App() {
 
 	return (
 		<AuthenticityTokenProvider token={data.csrfToken}>
-			<Document nonce={nonce} theme={theme}>
-				<div className="flex h-screen flex-col justify-between ">
-					<HeaderWithSearch />
-					<div className="flex-1">
-						<Outlet />
-					</div>
-					{/* <div className="container flex justify-between pb-5">
+			<HoneypotProvider {...data.honeyProps}>
+				<Document nonce={nonce} theme={theme}>
+					<div className="flex h-screen flex-col justify-between ">
+						<HeaderWithSearch />
+						<div className="flex-1">
+							<Outlet />
+						</div>
+						{/* <div className="container flex justify-between pb-5">
 					<ThemeSwitch userPreference={data.requestInfo.userPrefs.theme} />
 				</div> */}
-					<FooterMenuRight companyName="NEWS" altText="news logo" />
-				</div>
-			</Document>
+						<FooterMenuRight companyName="NEWS" altText="news logo" />
+					</div>
+				</Document>
+			</HoneypotProvider>
 		</AuthenticityTokenProvider>
 	)
 }
