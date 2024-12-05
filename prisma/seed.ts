@@ -70,6 +70,9 @@ async function seed() {
 	const businessCategory = await prisma.articleCategory.create({
 		data: { name: 'Business', slug: 'business' },
 	})
+	const sportsCategory = await prisma.articleCategory.create({
+		data: { name: 'Sport', slug: 'sport' },
+	})
 	console.timeEnd('📝 Created article categories...')
 
 	const totalUsers = 5
@@ -80,6 +83,7 @@ async function seed() {
 		techCategory,
 		entertainmentCategory,
 		businessCategory,
+		sportsCategory,
 	]
 
 	for (let index = 0; index < totalUsers; index++) {
@@ -115,7 +119,7 @@ async function seed() {
 							title: faker.lorem.sentence(),
 							content: faker.lorem.paragraphs(),
 							categoryId:
-								articleCategories[faker.number.int({ min: 0, max: 2 })].id,
+								articleCategories[faker.number.int({ min: 0, max: 3 })].id,
 							images: {
 								create: Array.from({
 									length: faker.number.int({ min: 1, max: 3 }),

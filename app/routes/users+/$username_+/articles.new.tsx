@@ -1,8 +1,8 @@
-import { json, type LoaderFunctionArgs } from '@remix-run/node'
 import { requireUserId } from '#app/utils/auth.server.ts'
-import { ArticleEditor } from './__article-editor.tsx'
-import { prisma } from '~/utils/db.server.ts'
+import { json, type LoaderFunctionArgs } from '@remix-run/node'
 import { useLoaderData } from '@remix-run/react'
+import { prisma } from '~/utils/db.server.ts'
+import { ArticleEditor } from './__article-editor.tsx'
 
 export { action } from './__article-editor.server.tsx'
 
@@ -14,6 +14,9 @@ export async function loader({ request }: LoaderFunctionArgs) {
 			name: true,
 		},
 	})
+
+	console.log({ categories })
+
 	return json({ categories })
 }
 
