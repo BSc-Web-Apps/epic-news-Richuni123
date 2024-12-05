@@ -1,4 +1,5 @@
-import { useMatches } from '@remix-run/react'
+import { Link, NavLink, useMatches } from '@remix-run/react'
+import NavLogo from '../molecules/NavLogo'
 import { SearchBar } from '../molecules/SearchBar'
 import LoginOrUserDropdown from './LoginOrUserDropdown'
 
@@ -8,11 +9,62 @@ export default function HeaderWithSearch() {
 	const searchBar = isOnSearchPage ? null : <SearchBar status="idle" />
 
 	return (
-		<header className="bg-primary/10 py-6 dark:bg-dark-primary/10">
+		<header className=" bg-red-600 lg:py-16">
 			<nav className="container flex flex-wrap items-center justify-between gap-4 sm:flex-nowrap md:gap-8">
-				<div className="ml-auto hidden max-w-sm flex-1 sm:block">
-					{searchBar}
+				<NavLink to="/">
+					<NavLogo />
+				</NavLink>
+
+				<div className="flex flex-1 justify-center gap-8">
+					<NavLink
+						to="/news"
+						prefetch="intent"
+						className={({ isActive }) =>
+							`${isActive ? 'text-black underline underline-offset-8' : 'text-white'}`
+						}
+					>
+						News
+					</NavLink>
+					<NavLink
+						to="/sport"
+						prefetch="intent"
+						className={({ isActive }) =>
+							`${isActive ? 'text-black underline underline-offset-8' : 'text-white'}`
+						}
+					>
+						Sport
+					</NavLink>
+					<NavLink
+						to="/business"
+						prefetch="intent"
+						className={({ isActive }) =>
+							`${isActive ? 'text-black underline underline-offset-8' : 'text-white'}`
+						}
+					>
+						Business
+					</NavLink>
+
+					<NavLink
+						to="/entertainment"
+						prefetch="intent"
+						className={({ isActive }) =>
+							`${isActive ? 'text-black underline underline-offset-8' : 'text-white'}`
+						}
+					>
+						Entertainment
+					</NavLink>
+					<NavLink
+						to="/contact-us"
+						prefetch="intent"
+						className={({ isActive }) =>
+							`${isActive ? 'text-black underline underline-offset-8' : 'text-white'}`
+						}
+					>
+						Contact us
+					</NavLink>
 				</div>
+
+				<div className="flex flex-1 justify-center gap-8">{searchBar}</div>
 				<div className="flex items-center gap-10">
 					<LoginOrUserDropdown />
 				</div>
