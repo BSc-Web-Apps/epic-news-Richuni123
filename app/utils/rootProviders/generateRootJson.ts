@@ -64,6 +64,7 @@ export default function generateRootJson({
 		toast,
 		honeyProps,
 		csrfToken,
+		isAdminUser: user ? user.roles.some(role => role.name === 'admin') : false,
 	}
 	const headerData = {
 		headers: combineHeaders(
