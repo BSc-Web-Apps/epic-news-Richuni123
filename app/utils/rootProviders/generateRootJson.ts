@@ -1,9 +1,9 @@
+import { type HoneypotInputProps } from 'remix-utils/honeypot/server'
 import { getHints } from '../client-hints'
 import { getEnv } from '../env.server'
 import { getDomainUrl, combineHeaders } from '../misc'
 import { getTheme } from '../theme.server'
-import { HoneypotInputProps } from 'remix-utils/honeypot/server'
-import { Timings } from '../timing.server'
+import { type Timings } from '../timing.server'
 
 interface RootJsonToast {
 	type: 'error' | 'message' | 'success'

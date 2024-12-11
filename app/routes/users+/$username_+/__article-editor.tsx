@@ -9,7 +9,7 @@ import {
 } from '@conform-to/react'
 import { getZodConstraint, parseWithZod } from '@conform-to/zod'
 import {
-	ArticleCategory,
+	type ArticleCategory,
 	type Article,
 	type ArticleImage,
 } from '@prisma/client'
@@ -17,7 +17,6 @@ import { type SerializeFrom } from '@remix-run/node'
 import { Form, useActionData } from '@remix-run/react'
 import { useState } from 'react'
 import { z } from 'zod'
-import { GeneralErrorBoundary } from '~/components/ErrorBoundary.js'
 import { floatingToolbarClassName } from '~/components/floating-toolbar.tsx'
 import { ErrorList, Field, TextareaField } from '~/components/forms.tsx'
 import { Button } from '~/components/ui/button.tsx'
@@ -27,6 +26,7 @@ import { StatusButton } from '~/components/ui/status-button.tsx'
 import { Textarea } from '~/components/ui/textarea.tsx'
 import { cn, getArticleImgSrc, useIsPending } from '~/utils/misc.tsx'
 import { type action } from './__article-editor.server'
+import { GeneralErrorBoundary } from '~/components/ErrorBoundary.js'
 import SelectorGroup from '~/components/molecules/SelectorGroup.js'
 
 const titleMinLength = 1

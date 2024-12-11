@@ -1,6 +1,6 @@
+import { json, useLoaderData, Link, type MetaFunction } from '@remix-run/react'
 import HeroCallToAction from '#app/components/organisms/Hero/HeroCallToAction.tsx'
 import { Button } from '#app/components/ui/button.tsx'
-import { json, useLoaderData, Link, type MetaFunction } from '@remix-run/react'
 import heroImage from '~/assets/jpg/sample-hero.jpg'
 import ArticleCard from '~/components/organisms/ArticleCard.tsx'
 import { prisma } from '~/utils/db.server.ts'
@@ -9,6 +9,7 @@ export const meta: MetaFunction = () => [{ title: 'Epic News' }]
 
 export async function loader() {
 	const allArticles = await prisma.article.findMany({
+		where: { isPublished: true },
 		select: {
 			id: true,
 			title: true,
@@ -50,6 +51,7 @@ export default function Index() {
 						allArticles.map(article => (
 							<ArticleCard
 								key={article.id}
+								articleId={article.id}
 								title={article.title}
 								category={article.category?.name}
 								imageId={article.images[0]?.id}

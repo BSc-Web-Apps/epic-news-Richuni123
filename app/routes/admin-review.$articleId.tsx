@@ -1,6 +1,5 @@
 import { getFormProps, useForm } from '@conform-to/react'
 import { Form, useActionData, useLoaderData } from '@remix-run/react'
-import { GeneralErrorBoundary } from '~/components/ErrorBoundary.js'
 import { floatingToolbarClassName } from '~/components/floating-toolbar.tsx'
 import { ErrorList } from '~/components/forms.tsx'
 import { Icon } from '~/components/ui/icon.tsx'
@@ -11,6 +10,7 @@ import {
 	type action,
 	type loader,
 } from './__admin-review.$articleId.server.tsx'
+import { GeneralErrorBoundary } from '~/components/ErrorBoundary.js'
 export { action, loader } from './__admin-review.$articleId.server.tsx'
 
 export default function AdminReviewRoute() {

@@ -19,6 +19,7 @@ export async function loader({ params }: LoaderFunctionArgs) {
 			category: { select: { name: true } },
 			owner: { select: { name: true } },
 			images: { select: { id: true } },
+			isPublished: true,
 		},
 	})
 

@@ -27,6 +27,7 @@ interface SingleArticleProps {
 	}
 }
 export default function SingleArticle({ article }: SingleArticleProps) {
+	console.log('SingleArticle data:', article)
 	const mainImage = article.images[0]
 	const imageSrc = article.images.length
 		? getArticleImgSrc(mainImage.id)
