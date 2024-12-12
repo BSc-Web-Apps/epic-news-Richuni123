@@ -32,10 +32,8 @@ export default function Index() {
 			>
 				<div className="flex h-full flex-1 flex-col justify-between p-16">
 					<div className="flex flex-col gap-8">
-						<h2 className="text-h2">Welcome to Epic News</h2>
-						<p className="text-lg">
-							Keep up to date with the latest tech news.
-						</p>
+						<h2 className="text-h2">Welcome to News</h2>
+						<p className="text-lg">Keep up to date with the latest news.</p>
 					</div>
 					<Button asChild variant="default" size="lg">
 						<Link to="/signup">Sign up</Link>
@@ -62,10 +60,6 @@ export default function Index() {
 					)}
 				</div>
 			</div>
-
-			<p className="text-base text-gray-600 md:text-lg lg:text-2xl">
-				Welcome to Epic News, where the latest developments in tech are found.
-			</p>
 		</main>
 	)
 }

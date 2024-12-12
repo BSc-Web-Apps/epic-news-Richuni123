@@ -10,18 +10,18 @@ const FooterMenuRight = ({
 }: FooterProps) => {
 	return (
 		<footer className=" bg-red-600 lg:py-16">
-			<div className="dark:border-dark-muted-foreground/75 container items-center justify-between border-b border-muted-foreground/75 py-8 lg:flex">
-				<Link to="/" className="flex w-20 items-center justify-center lg:w-24">
+			<div className="container items-center justify-between border-b border-red-950 py-8 lg:flex">
+				<Link to="/" className="flex w-20 items-center justify-center lg:w-44">
 					<NavLogo />
 				</Link>
 
 				<div className="lg:flex">
-					<div className="dark:text-dark-secondary-foreground flex items-start gap-6 py-8 font-bold text-secondary-foreground lg:mr-24">
+					<div className=" flex items-start gap-6 py-8 font-bold text-secondary-foreground lg:mr-24">
 						<div>
 							<NavLink
 								to="/about-us"
 								prefetch="intent"
-								className="text-sm font-semibold text-muted-foreground transition hover:text-foreground"
+								className="text-sm font-semibold text-white transition hover:text-black"
 							>
 								About us
 							</NavLink>
@@ -30,7 +30,7 @@ const FooterMenuRight = ({
 							<NavLink
 								to="/contact-us"
 								prefetch="intent"
-								className="text-sm font-semibold text-muted-foreground transition hover:text-foreground"
+								className="text-sm font-semibold text-white transition hover:text-black"
 							>
 								Contact us
 							</NavLink>
@@ -53,7 +53,7 @@ const FooterMenuRight = ({
 			</div>
 
 			<div className="container flex items-center justify-between py-8">
-				<div className="dark:text-dark-muted-foreground/75 text-xs text-muted-foreground/75">
+				<div className=" text-sm text-white">
 					&copy; {companyName} | {new Date().getFullYear()}
 				</div>
 				<div className="flex w-20 items-center justify-center lg:w-24">

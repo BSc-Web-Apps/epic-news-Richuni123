@@ -1,5 +1,6 @@
 import { type LinksFunction } from '@remix-run/node'
 import { Outlet, useLoaderData } from '@remix-run/react'
+import { ParallaxProvider } from 'react-scroll-parallax'
 import { AuthenticityTokenProvider } from 'remix-utils/csrf/react'
 import { HoneypotProvider } from 'remix-utils/honeypot/react'
 import Document from '~/components/shared-layout/Document'
@@ -8,7 +9,11 @@ import rootLinkElements from '~/utils/providers/rootLinkElements'
 import { type loader } from './__root.server'
 import FooterMenuRight from './components/organisms/Footer/FooterMenuRight'
 import HeaderWithSearch from './components/organisms/HeaderWithSearch'
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+import ParallaxBackground from './components/organisms/Hero/ParallaxBackground.tsx'
 import useTheme from './hooks/useTheme.tsx'
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+import logo from '~/assets/png/epic-news-logo.png'
 
 export const links: LinksFunction = () => {
 	return rootLinkElements
@@ -24,18 +29,20 @@ export default function App() {
 	return (
 		<AuthenticityTokenProvider token={data.csrfToken}>
 			<HoneypotProvider {...data.honeyProps}>
-				<Document nonce={nonce} theme={theme}>
-					<div className="flex h-screen flex-col justify-between ">
-						<HeaderWithSearch isAdminUser={data.isAdminUser} />
-						<div className="flex-1">
-							<Outlet />
-						</div>
-						{/* <div className="container flex justify-between pb-5">
+				<ParallaxProvider>
+					<Document nonce={nonce} theme={theme}>
+						<div className="flex h-screen flex-col justify-between ">
+							<HeaderWithSearch isAdminUser={data.isAdminUser} />
+							<div className="flex-1">
+								<Outlet />
+							</div>
+							{/* <div className="container flex justify-between pb-5">
 					<ThemeSwitch userPreference={data.requestInfo.userPrefs.theme} />
 				</div> */}
-						<FooterMenuRight companyName="NEWS" altText="news logo" />
-					</div>
-				</Document>
+							<FooterMenuRight companyName="NEWS" altText="news logo" />
+						</div>
+					</Document>
+				</ParallaxProvider>
 			</HoneypotProvider>
 		</AuthenticityTokenProvider>
 	)
