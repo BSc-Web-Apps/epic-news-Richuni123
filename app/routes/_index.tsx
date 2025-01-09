@@ -10,6 +10,9 @@ export const meta: MetaFunction = () => [{ title: 'Epic News' }]
 export async function loader() {
 	const allArticles = await prisma.article.findMany({
 		where: { isPublished: true },
+		orderBy: {
+			publishedAt: 'desc', // Orders articles by the 'publishedAt' field in descending order
+		},
 		select: {
 			id: true,
 			title: true,
@@ -30,16 +33,28 @@ export default function Index() {
 				imageRight={true}
 				hasBackgroundColour={true}
 			>
-				<div className="flex h-full flex-1 flex-col justify-between p-16">
-					<div className="flex flex-col gap-8">
-						<h2 className="text-h2">Welcome to News</h2>
-						<p className="text-lg">Keep up to date with the latest news.</p>
+				<div className="flex h-full flex-1 flex-col justify-between bg-white p-16">
+					<div className="flex flex-col gap-8 text-center">
+						<h2 className="text-h2">Welcome to the World of News</h2>
+						<p className="text-lg">
+							Stay informed with the latest updates from around the world. From
+							breaking news to in-depth analysis, we provide everything you need
+							to keep up-to-date with what matters most. Join our community and
+							get exclusive access to news stories, features, and personalized
+							content delivered right to your inbox.
+						</p>
+						<p className="text-lg">
+							Don’t miss out—be the first to know when something big happens.
+							Sign up now and get the latest updates directly from us!
+						</p>
 					</div>
 					<Button asChild variant="default" size="lg">
 						<Link to="/signup">Sign up</Link>
 					</Button>
 				</div>
 			</HeroCallToAction>
+
+			<div className="mx-auto my-8 w-[80%] border-t-2 border-black"></div>
 
 			<div className="container py-16">
 				<h2 className="mb-8 text-h2 font-normal">Latest news</h2>

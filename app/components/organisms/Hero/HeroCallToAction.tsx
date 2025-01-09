@@ -13,7 +13,7 @@ const HeroCallToAction = ({
 }: HeroCallToActionProps) => {
 	return (
 		<div className={`md:flex  ${imageRight && 'md:flex-row-reverse'}`}>
-			<div className="relative flex h-96 items-center justify-center overflow-hidden md:h-[32rem] md:w-1/2">
+			<div className="h-50 relative flex items-center justify-center overflow-hidden md:h-[28rem] md:w-1/2">
 				<h1 className="text-mega">Welcome to the world of NEWS!</h1>
 				<img
 					src={image}

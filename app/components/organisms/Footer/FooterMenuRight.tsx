@@ -10,7 +10,7 @@ const FooterMenuRight = ({
 }: FooterProps) => {
 	return (
 		<footer className=" bg-red-600 lg:py-16">
-			<div className="container items-center justify-between border-b border-red-950 py-8 lg:flex">
+			<div className="container items-center justify-between border-b border-red-950  py-8 lg:flex">
 				<Link to="/" className="flex w-20 items-center justify-center lg:w-44">
 					<NavLogo />
 				</Link>

@@ -24,7 +24,7 @@ export default function AdminReviewRoute() {
 					{data.article.category?.name ?? 'General News'}
 				</p>
 				<p
-					className={`w-fit rounded-lg ${data.article.isPublished ? 'bg-green-800' : 'bg-destructive'} px-4 py-2 text-xs font-bold text-card-foreground`}
+					className={`w-fit rounded-lg ${data.article.isPublished ? 'bg-green-800' : 'bg-red-600 '} px-4 py-2 text-sm text-white`}
 				>
 					{data.article.isPublished ? 'Published' : 'Awaiting review'}
 				</p>
