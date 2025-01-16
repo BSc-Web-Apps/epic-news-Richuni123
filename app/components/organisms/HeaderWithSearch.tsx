@@ -34,7 +34,7 @@ export default function HeaderWithSearch({
 						to="/news"
 						prefetch="intent"
 						className={({ isActive }) =>
-							`${isActive ? 'text-black underline underline-offset-8' : 'text-white'}`
+							`${isActive ? 'text-4xl text-black underline underline-offset-8' : 'text-4xl text-white'}`
 						}
 					>
 						News
@@ -44,7 +44,7 @@ export default function HeaderWithSearch({
 						to="/contact-us"
 						prefetch="intent"
 						className={({ isActive }) =>
-							`${isActive ? 'text-black underline underline-offset-8' : 'text-white'}`
+							`${isActive ? 'text-4xl text-black underline underline-offset-8' : 'text-4xl text-white'}`
 						}
 					>
 						Contact us

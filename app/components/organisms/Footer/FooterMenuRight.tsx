@@ -21,7 +21,7 @@ const FooterMenuRight = ({
 							<NavLink
 								to="/about-us"
 								prefetch="intent"
-								className="text-sm font-semibold text-white transition hover:text-black"
+								className="text-md font-semibold text-white transition hover:text-black"
 							>
 								About us
 							</NavLink>
@@ -30,7 +30,7 @@ const FooterMenuRight = ({
 							<NavLink
 								to="/contact-us"
 								prefetch="intent"
-								className="text-sm font-semibold text-white transition hover:text-black"
+								className="text-md font-semibold text-white transition hover:text-black"
 							>
 								Contact us
 							</NavLink>
