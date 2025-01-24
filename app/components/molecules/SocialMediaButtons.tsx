@@ -14,7 +14,7 @@ export default function ShareButtons() {
 	const currentUrl = `http://localhost:3000${pathname}`
 
 	const sharedStyles =
-		'stroke-secondary-foreground dark:stroke-dark-secondary-foreground hover:stroke-secondary-foreground/75 dark:hover:stroke-dark-secondary-foreground/75'
+		'stroke-black hover:stroke-muted-foreground dark:stroke-black dark:hover:stroke-muted-foreground'
 
 	return (
 		<div className="flex items-center">

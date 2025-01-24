@@ -27,7 +27,7 @@ export function ErrorBoundary() {
 				404: () => (
 					<div className="flex flex-col gap-6">
 						<div className="flex flex-col gap-3">
-							<h1>We can't find this page:</h1>
+							<h1>Error 404 We can't find this page:</h1>
 							<pre className="whitespace-pre-wrap break-all text-body-lg">
 								{location.pathname}
 							</pre>

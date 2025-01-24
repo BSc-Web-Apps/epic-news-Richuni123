@@ -1,8 +1,9 @@
-import { useOptionalUser } from '#app/utils/user'
 import { Link } from '@remix-run/react'
-import UserDropdown from '../molecules/UserDropDown'
+import { useOptionalUser } from '#app/utils/user'
 import { Button } from '../atoms/Button'
+import UserDropdown from '../molecules/UserDropDown'
 
+// eslint-disable-next-line react/display-name
 export default function () {
 	const user = useOptionalUser()
 
@@ -12,7 +13,7 @@ export default function () {
 				<UserDropdown />
 			) : (
 				<Button asChild variant="default" size="lg">
-					<Link to="/login">Log In</Link>
+					<Link to="/login">Log&nbsp;in</Link>
 				</Button>
 			)}
 		</>
