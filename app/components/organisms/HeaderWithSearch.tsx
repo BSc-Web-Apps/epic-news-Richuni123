@@ -22,14 +22,6 @@ export default function HeaderWithSearch({
 				</NavLink>
 
 				<div className="flex flex-1 items-center justify-center gap-8">
-					{isAdminUser && (
-						<Link
-							to="/admin-review"
-							className="bg-red-850 rounded-lg px-4 py-2 text-sm font-semibold text-foreground text-white transition hover:bg-red-700"
-						>
-							Admin Review
-						</Link>
-					)}
 					<NavLink
 						to="/news"
 						prefetch="intent"
@@ -49,6 +41,15 @@ export default function HeaderWithSearch({
 					>
 						Contact us
 					</NavLink>
+
+					{isAdminUser && (
+						<Link
+							to="/admin-review"
+							className="bg-red-850 rounded-lg px-4 py-1 text-lg font-semibold text-foreground text-white transition hover:bg-red-700"
+						>
+							Admin Review
+						</Link>
+					)}
 				</div>
 
 				<div className="flex gap-4">

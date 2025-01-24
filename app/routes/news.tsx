@@ -9,7 +9,7 @@ export default function NewsPage() {
 					to="business"
 					prefetch="intent"
 					className={({ isActive }) =>
-						`${isActive ? 'text-red-500 underline underline-offset-8' : 'text-black'}`
+						`${isActive ? 'text-2xl text-red-500 underline underline-offset-8' : 'text-2xl text-black'}`
 					}
 				>
 					Business
@@ -18,7 +18,7 @@ export default function NewsPage() {
 					to="sport"
 					prefetch="intent"
 					className={({ isActive }) =>
-						`${isActive ? 'text-red-500 underline underline-offset-8' : 'text-black'}`
+						`${isActive ? 'text-2xl text-red-500 underline underline-offset-8' : 'text-2xl text-black'}`
 					}
 				>
 					Sport
@@ -27,7 +27,7 @@ export default function NewsPage() {
 					to="entertainment"
 					prefetch="intent"
 					className={({ isActive }) =>
-						`${isActive ? 'text-red-500 underline underline-offset-8' : 'text-black'}`
+						`${isActive ? 'text-2xl text-red-500 underline underline-offset-8' : 'text-2xl text-black'}`
 					}
 				>
 					Entertainment

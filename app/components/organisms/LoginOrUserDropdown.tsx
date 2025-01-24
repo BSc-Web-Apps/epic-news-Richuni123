@@ -13,7 +13,7 @@ export default function () {
 				<UserDropdown />
 			) : (
 				<Button asChild variant="default" size="lg">
-					<Link to="/login">Log In</Link>
+					<Link to="/login">Log&nbsp;in</Link>
 				</Button>
 			)}
 		</>

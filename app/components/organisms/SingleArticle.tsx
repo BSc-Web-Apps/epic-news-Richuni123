@@ -5,6 +5,7 @@ import {
 	MdOutlineTheaters,
 	MdOutlineDesktopMac,
 	MdOutlineNewspaper,
+	MdSportsSoccer,
 } from 'react-icons/md'
 import { toTitleCase } from '#app/utils/stringUtils.js'
 import siteLogo from '~/assets/svg/site-logo.svg'
@@ -35,12 +36,11 @@ export default function SingleArticle({ article }: SingleArticleProps) {
 	const categoryTitle = toTitleCase(article.category?.name || '')
 
 	const categoryIcons: { [key: string]: JSX.Element } = {
-		Business: <MdOutlineBusinessCenter size={20} className="text-violet-300" />,
-		Entertainment: <MdOutlineTheaters size={20} className="text-violet-300" />,
-		Technology: <MdOutlineDesktopMac size={20} className="text-violet-300" />,
-		'General news': (
-			<MdOutlineNewspaper size={20} className="text-violet-300" />
-		),
+		Business: <MdOutlineBusinessCenter size={20} className="text-black" />,
+		Entertainment: <MdOutlineTheaters size={20} className="text-black" />,
+		Sport: <MdSportsSoccer size={20} className="text-black" />,
+		Technology: <MdOutlineDesktopMac size={20} className="text-black" />,
+		'General news': <MdOutlineNewspaper size={20} className="text-black" />,
 	}
 
 	return (
@@ -48,7 +48,7 @@ export default function SingleArticle({ article }: SingleArticleProps) {
 			<div className="lg:w-2/3">
 				<Link
 					to="/news"
-					className="group flex items-center gap-2 pb-4 text-muted-foreground transition hover:text-foreground"
+					className="group flex items-center gap-2 pb-4 text-black transition hover:text-muted-foreground"
 				>
 					<FiArrowLeft className="transition group-hover:-translate-x-1" /> Back
 					to News
@@ -69,11 +69,9 @@ export default function SingleArticle({ article }: SingleArticleProps) {
 				<div className="flex justify-between gap-4 pt-4">
 					<div className="flex items-center gap-2">
 						{categoryIcons[categoryTitle]}
-						<p className="text-sm text-violet-300">{categoryTitle}</p>
+						<p className="text-sm text-black">{categoryTitle}</p>
 					</div>
-					<span className="text-sm text-muted-foreground">
-						By: {article.owner.name}
-					</span>
+					<span className="text-sm text-black">By: {article.owner.name}</span>
 				</div>
 				<div className="whitespace-break-spaces pt-16 text-lg leading-loose">
 					{article.content}

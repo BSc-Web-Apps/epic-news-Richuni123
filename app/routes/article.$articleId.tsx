@@ -38,11 +38,4 @@ const ArticleNotFound = () => {
 export default function ArticlePage() {
 	const { article } = useLoaderData<typeof loader>()
 	return article ? <SingleArticle article={article} /> : <ArticleNotFound />
-	return article ? (
-		<div className="container py-16">
-			<h2 className="pb-8 text-h2">{article.title}</h2>
-		</div>
-	) : (
-		<ArticleNotFound />
-	)
 }
