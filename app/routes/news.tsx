@@ -4,7 +4,7 @@ export default function NewsPage() {
 	return (
 		<main className="container py-16">
 			<h1 className="text-mega">News</h1>
-			<div className="flex space-x-4 py-4">
+			<div className="grid grid-cols-1 gap-4 py-4 sm:grid-cols-2 md:grid-cols-3">
 				<NavLink
 					to="business"
 					prefetch="intent"

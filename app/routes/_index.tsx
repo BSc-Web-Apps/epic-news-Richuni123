@@ -33,7 +33,7 @@ export default function Index() {
 				imageRight={true}
 				hasBackgroundColour={true}
 			>
-				<div className="flex h-full flex-1 flex-col justify-between bg-white p-16">
+				<div className="flex h-full flex-1 flex-col justify-between bg-white p-4 md:flex-row md:p-16">
 					<div className="flex flex-col gap-8 text-center">
 						<h2 className="text-h2">Welcome to the World of News</h2>
 						<p className="text-lg">
@@ -54,12 +54,12 @@ export default function Index() {
 				</div>
 			</HeroCallToAction>
 
-			<div className="mx-auto my-8 w-[80%] border-t-2 border-black"></div>
+			<div className=" mx-auto my-8 w-[80%] border-t-2 border-black "></div>
 
 			<div className="container py-16">
 				<h2 className="mb-8 text-h2 font-normal">Latest news</h2>
 
-				<div className="grid grid-cols-2 gap-6 md:grid-cols-3 lg:grid-cols-4">
+				<div className="grid grid-cols-2 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
 					{allArticles.length > 0 ? (
 						allArticles.map(article => (
 							<ArticleCard
