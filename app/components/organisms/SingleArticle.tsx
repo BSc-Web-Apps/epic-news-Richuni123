@@ -60,7 +60,7 @@ export default function SingleArticle({ article }: SingleArticleProps) {
 				>
 					<div className="absolute inset-0">
 						<img
-							className="h-full w-full rounded-t-lg object-cover"
+							className="h-full w-full rounded-t-lg object-cover   "
 							src={imageSrc}
 							alt={article.title}
 						/>
