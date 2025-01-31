@@ -44,8 +44,8 @@ export default function SingleArticle({ article }: SingleArticleProps) {
 	}
 
 	return (
-		<div className="container py-16">
-			<div className="lg:w-2/3">
+		<div className="container flex min-h-screen items-center justify-center py-16">
+			<div className="w-full max-w-3xl lg:w-2/3">
 				<Link
 					to="/news"
 					className="group flex items-center gap-2 pb-4 text-black transition hover:text-muted-foreground"
@@ -53,7 +53,7 @@ export default function SingleArticle({ article }: SingleArticleProps) {
 					<FiArrowLeft className="transition group-hover:-translate-x-1" /> Back
 					to News
 				</Link>
-				<h2 className="pb-8 text-h2">{article.title}</h2>
+				<h2 className="pb-8 text-center text-h2">{article.title}</h2>
 
 				<div
 					className={`relative h-[18rem] object-cover md:h-[23rem] lg:h-[28rem]`}
