@@ -33,7 +33,7 @@ export default function Index() {
 				imageRight={true}
 				hasBackgroundColour={true}
 			>
-				<div className="flex h-full flex-1 flex-col justify-between bg-white p-4 md:flex-row md:p-16">
+				<div className="flex h-full flex-1 flex-col justify-between bg-white p-4 md:p-16">
 					<div className="flex flex-col gap-8 text-center">
 						<h2 className="text-h2">Welcome to the World of News</h2>
 						<p className="text-lg">
@@ -48,15 +48,19 @@ export default function Index() {
 							Sign up now and get the latest updates directly from us!
 						</p>
 					</div>
-					<Button asChild variant="default" size="lg">
+
+					<Button
+						asChild
+						variant="default"
+						size="lg"
+						className=" mb-32 mt-6 md:mb-0 md:mt-0"
+					>
 						<Link to="/signup">Sign up</Link>
 					</Button>
 				</div>
 			</HeroCallToAction>
 
-			<div className=" mx-auto my-8 w-[80%] border-t-2 border-black "></div>
-
-			<div className="container py-16">
+			<div className="container mt-32 py-16 md:mt-0 md:py-24">
 				<h2 className="mb-8 text-h2 font-normal">Latest news</h2>
 
 				<div className="grid grid-cols-2 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
