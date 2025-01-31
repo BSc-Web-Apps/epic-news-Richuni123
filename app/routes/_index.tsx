@@ -33,9 +33,11 @@ export default function Index() {
 				imageRight={true}
 				hasBackgroundColour={true}
 			>
-				<div className="flex h-full flex-1 flex-col justify-between bg-white p-4 md:p-16">
-					<div className="flex flex-col gap-8 text-center">
-						<h2 className="text-h2">Welcome to the World of News</h2>
+				<div className="flex h-full flex-1 flex-col justify-between bg-white p-6 md:px-8 md:py-4 md:pt-4 lg:p-16">
+					<div className="flex flex-col gap-6 text-center md:text-left ">
+						<h2 className="text-3xl md:text-4xl">
+							Welcome to the World of News
+						</h2>
 						<p className="text-lg">
 							Stay informed with the latest updates from around the world. From
 							breaking news to in-depth analysis, we provide everything you need
