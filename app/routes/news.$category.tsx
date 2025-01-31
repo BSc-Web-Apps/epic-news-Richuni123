@@ -37,7 +37,7 @@ export default function NewsCategoryPage() {
 			<div className="container py-16">
 				<h2 className="pb-10 text-h2">{categoryTitle}</h2>
 
-				<div className="grid grid-cols-1 gap-6 py-4 sm:grid-cols-2 md:grid-cols-5 lg:grid-cols-7">
+				<div className="grid grid-cols-1 gap-6 py-4 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-5">
 					{/* Handle no articles found */}
 					{filteredArticles.length === 0 ? (
 						<p>No published articles in this category</p>
