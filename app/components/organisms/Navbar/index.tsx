@@ -3,11 +3,11 @@ import { useState } from 'react'
 import { Menu, X } from 'react-feather'
 
 import logo from '~/assets/svg/icon-placeholder.svg'
-import { useOptionalUser } from '~/utils'
 
 import Breadcrumbs from '../../molecules/Breadcrumbs'
 
 import NavbarLink from './NavbarLink'
+import { useOptionalUser } from '~/utils'
 
 const Navbar = () => {
 	const [isOpen, setIsOpen] = useState(false)
